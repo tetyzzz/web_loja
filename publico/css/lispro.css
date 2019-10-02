@@ -1,0 +1,23 @@
+#texte{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-style: none;
+    padding: 10px;
+}
+#lis{
+    text-align: center;
+}
+#textes{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-style: none;
+    padding: 10px;
+    margin-left: 43%;
+}
+#texs{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}

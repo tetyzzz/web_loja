@@ -1,0 +1,21 @@
+
+#nome{
+    margin-top: -2%;
+    text-align: center;
+    font-family: Verdana;
+    font-size: 25px;
+}
+#arvore{
+    margin-top: 2%;
+    background-color: black;
+    color: white;
+    padding: 20px;
+    border-style: none;
+    border-color: white;
+}
+
+#arara{
+    border-style: solid;
+    border-color: black;
+    border-width: 10px;
+}

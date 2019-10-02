@@ -1,0 +1,1 @@
+Esta loja tem como intuito vender roupas.

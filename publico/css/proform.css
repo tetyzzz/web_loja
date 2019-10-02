@@ -1,0 +1,17 @@
+#texte{
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-style: none;
+    margin-left: 41%;
+    padding: 10px;
+}
+#tex{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+#cen{
+    margin-left: 30%;
+    width: 30%;
+}

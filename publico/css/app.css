@@ -1,0 +1,272 @@
+#cssaula{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 2%;
+    text-align: justify;
+}
+
+#bo{
+    padding-left: 10%;
+    padding-bottom: 2%;
+    padding-top: 2%;
+}
+#aves{
+    text-align: center;
+    margin-left: 30%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-style: none;
+    border-color: white;
+    width: 100%;
+}
+#waa{
+    padding: 20px;
+}
+#bar{
+    margin-top: -5%;
+}
+#pesquisa{
+    margin-left: 40%;
+    width: 25%;
+    height: 30%;}
+#arara{
+    border-style: solid;
+    width: 100%;
+    padding: 30px;
+}
+#tr{
+    padding-bottom: 10px;
+    margin: 1%;
+}
+
+#fundo{
+    width: 25%;
+    height: 70%;
+    margin-left: 2%;
+    margin-top: 2%;
+
+}
+body {
+    background-image: url("imgs/a.jpg");
+}
+#desc{
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 3px;
+    margin-top: 2%;
+    padding-left: 10%;
+    padding-top: 3%;
+    background-color: black;
+    margin-left: -12%;
+    color: white;
+    width: 122.7%
+}
+
+.button {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: solid black;
+    border-radius: 500px;
+    float: right;
+    margin-top: 2.5%;
+    margin-right: 3%;
+}
+
+.button5:hover {
+    background-color: black;
+    color: white;
+}
+
+#it{
+    border: solid;
+    border-color: black;
+    margin-bottom: 2%;
+    border-width: 0px;
+    width: 100%;
+}
+#colum{
+    background-color: black;
+    height: 20%;
+
+
+}
+
+#menu{
+    background-color: black;
+    padding: 1.5%;
+    border-top: solid;
+    border-color: #3d000f;
+    border-width: 3px;
+    padding-top: 2%;
+    margin-bottom: 2%;
+    position: auto;
+}
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%;
+    border-top: solid;
+    border-top-color:white;
+    }
+
+.navbar a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px ;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar a:hover {
+    background: #ddd;
+    color: black;
+}
+
+.main {
+    padding: 16px;
+    margin-top: 30px;
+    height: 1500px;
+}
+li{
+    display: table-cell;
+}
+#h{
+    margin-left: 3%;
+}
+#c{
+    margin-right: 3%;
+}
+
+#rodape{
+    padding-top: 3%;
+    height: 40%;
+    background-color: black;
+    border-left: solid;
+    border-left-color: black;
+    color: white;
+    width: 99.25%;
+    margin-bottom: 0%;
+    padding-right: 1%;
+}
+.lista {
+    color: white;
+    margin-left: 0px;
+    width: 25%;
+    float: left;
+}
+
+.lista ul {
+    margin-top: 20px;
+    margin-bottom: -2%;
+}
+
+.lista a{
+    text-decoration:none;
+    color: #ffffff;
+}
+
+.lista li {
+    color: #cdced0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+#pagamento{
+    display: inline-block;
+    padding-left: 5px;
+}
+
+
+#r{
+    width: 100%;
+
+}
+
+.clear {
+    clear:both;
+}	
+#titulo{
+    width: 10%;
+}			
+
+html{
+    background-color: white;
+    margin-left: -0.4%;
+}
+#co16{
+    background-color: blue;
+    width: 100%;
+    margin-top: 5%;
+    height: 70%;
+    margin-bottom: 5%;
+}
+#rp1{
+    width: 100%;
+    height: 100%;
+
+}
+#remo{
+    background-color: black;
+    color: white;
+    margin-left: 10%;
+    border-color: transparent;
+    border-radius: 50px;
+    padding: 10px;
+    width: 35%;
+}
+#edit{
+    background-color: black;
+    color: white;
+    margin-left: 10%;
+    border-color: transparent;
+    border-radius: 50px;
+    padding: 10px;
+    width: 35%;
+}
+#fim{
+    margin-left: 20%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+#add{
+    background-color: white;
+    color: black;
+    margin-left: 10%;
+    border-color: transparent;
+    padding: 10px;
+    width: 25%;	
+    font-weight: bold;
+}
+#save{
+    background-color: white;
+    color: black;
+    margin-left: 10%;
+    border-color: transparent;
+    padding: 10px;
+    width: 25%;		
+    font-weight: bold;
+}
