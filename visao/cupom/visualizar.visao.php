@@ -1,5 +1,5 @@
 <h2>VER DETALHES DO CUPOM</h2>
-<p><strong>Id: </strong><?= $idcupom['id'] ?> </p>
-<p><strong>Nome: </strong><?= $idcupom['nomecupom'] ?> </p>
-<p><strong>Desconto: </strong><?= $idcupom['desconto'] ?> </p>
+<p><strong>Id: </strong><?= $cupom['idcupom'] ?> </p>
+<p><strong>Nome: </strong><?= $cupom['nomecupom'] ?> </p>
+<p><strong>Desconto: </strong><?= $cupom['desconto'] ?> </p>
 <br><br>

@@ -18,7 +18,7 @@
         <td><a href="./cupom/deletar/<?=$cupom['idcupom']?>">Deletar</a></td>        
     </tr>
     
-    <?php endforeach; ?>    
+    <?php endforeach ?>    
 </table>
 <br>
 <a href="cupom/adicionar" class="btn btn-primary">Novo cupom</a>

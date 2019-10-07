@@ -38,6 +38,19 @@ function adicionar() {
 
 function listarcupom() {
     $dados = array();
-    $dados ["cupom"] = pegartodoscupom();
+    $dados ["cupons"] = pegartodoscupom();
     exibir("cupom/listarCupom", $dados);
+}
+
+function editar($idcupom) {
+    if (ehPost()) {
+        $nomecupom = $_POST['cupom'];
+        $desconto = $_POST['desconto'];
+
+        editarcupom($idcupom, $nomecupom, $desconto);
+        redirecionar("cupom/listarcupom");
+    } else {
+        $dados['cupom'] = pegartodoscupom($idcupom);
+        exibir("cupom/formulariocupom", $dados);
+    }
 }
