@@ -2,11 +2,13 @@
 
 require_once "modelo/cupomModelo.php";
 
+/** admin */
 function ver($idcupom) {
     $dados["cupom"] = pegarcupomPorId($idcupom);
     exibir("cupom/visualizar", $dados);
 }
 
+/** admin */
 function adicionar() {
     if (ehPost()) {
         $nomecupom = $_POST["cupom"];
@@ -36,12 +38,14 @@ function adicionar() {
     }
 }
 
+
 function listarcupom() {
     $dados = array();
     $dados ["cupons"] = pegartodoscupom();
     exibir("cupom/listarCupom", $dados);
 }
 
+/** admin */
 function editar($idcupom) {
     if (ehPost()) {
         $nomecupom = $_POST['cupom'];
@@ -54,3 +58,16 @@ function editar($idcupom) {
         exibir("cupom/formulariocupom", $dados);
     }
 }
+
+/** admin */
+function deletar($idcupom) {
+    $msg = deletarcupom($idcupom);
+    redirecionar("cupom/listarcupom");
+}
+                
+                
+                
+                
+                
+                
+                

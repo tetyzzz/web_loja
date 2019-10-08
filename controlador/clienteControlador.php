@@ -3,12 +3,14 @@
 require_once "modelo/ClienteModelo.php";
 require_once "modelo/enderecoModelo.php";
 
+/** admin */
 function ver($id) {
     $dados["cliente"] = pegarUsuarioPorId($id);
     $dados["enderecos"] = listarEnderecos($id);
     exibir("cliente/visualizar", $dados);
 }
 
+/** admin */
 function OLHAR() {
 
     if (ehPost()) {
@@ -51,21 +53,25 @@ function OLHAR() {
     }
 }
 
+/** anon */
 function listar() {
     $dados = array();
     $dados ["clientes"] = pegartodosclientes();
     exibir("cliente/listar", $dados);
 }
 
+
 function mostrar() {
     exibir("cliente/listar");
 }
 
+/** admin */
 function deletar($id) {
     $msg = deletarCliente($id);
     redirecionar("./cliente/listar");
 }
 
+/** admin */
 function editar($id) {
     if (ehPost()) {
         $email = $_POST["email"];

@@ -36,3 +36,13 @@ function editarcupom($idcupom, $nomecupom, $desconto) {
     }
     return "Cupom alterado com sucesso!";
 }
+
+function deletarcupom($idcupom) {
+    $sql = "DELETE FROM cupom where idcupom = $idcupom";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+
+    if (!resultado) {
+        die('Erro ao deletar cupom' . mysqli_error($cnx));
+    }
+    return 'Cupom cadastrada com sucesso!';
+}

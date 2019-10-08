@@ -21,7 +21,7 @@
     <div class="navbar">
         <a href="./principal/paginaprincipal">Home</a>
         <a href="./produto/listarprodutos">Produtos</a>
-        <a href="adm.html">Seção Administrador</a>
+        <a href="./admin/secadmin">Seção Administrador</a>
         <a href="./car/listar">Carrinho</a>
         <a href="./cliente/olhar">Cadastrar-se</a>
     </div>
@@ -37,7 +37,7 @@
             <li id="waa" ><a href="./cliente/listar"><button id="aves">Listar todos os clientes</button></a><br><br></li>
             <li id="waa" ><a href="./produto/listarprodutos"><button id="aves">Listar todos os produtos</button></a><br><br></li>
             <li id="waa" ><a href="./categoria/listarcategorias"><button id="aves">Listar todos as categorias</button></a></li>
-            <li id="waa" ><a href="./cupom/adicionar"><button id="aves">Listar todos os cupons</button></a></li>
+            <li id="waa" ><a href="./cupom/listarCupom"><button id="aves">Listar todos os cupons</button></a></li>
         </ul>
     </main>
 
@@ -67,7 +67,17 @@
                     <li><a href = "#">SAC 15 99604 7336</a></li>
                     <li><a href = "#">sac@fabulouscloset.com.br</a></li>
                 </ul>
-            </div>		
+            </div>
+
+            <div class="lista">
+                <span class="titulo">FORMAS DE PAGAMENTO</span>
+                <ul>
+                    <li id="pagamento"><a href = "#"><i style='font-size:30px' class='fab'>&#xf1f0;</i></a></li>
+                    <li id="pagamento"><a href = "#"><i style='font-size:30px' class='fab'>&#xf1f1;</i></a></li>
+                    <li id="pagamento"><a href = "#"><i style='font-size:30px' class='fab'>&#xf24c;</i></a></li>
+                    <li id="pagamento"><a href = "#"><i style='font-size:33px' class='fas'>&#xf3d1;</i></a></li>
+                </ul>
+            </div>
 
         </div>
     </div>

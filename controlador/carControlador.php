@@ -2,6 +2,7 @@
 
 require_once 'modelo/produtoModelo.php';
 
+/** admin */
 function adicionar($idproduto) {
 
     if (!isset($_SESSION["carrinho"])) {
@@ -15,6 +16,7 @@ function adicionar($idproduto) {
     redirecionar("car/listar");
 }
 
+/** user */ 
 function listar() {
 
     if (isset($_SESSION["carrinho"])) {
@@ -34,21 +36,23 @@ function listar() {
     exibir('carrinho/listar', $dados);
 }
 
-function aha() {
-    session_start();
 
-    $nome = $_GET["nome"];
+//function aha() {
+ //   session_start();
 
-    if (isset($_SESSION["carrinho"])) {
-        $produtos = $_SESSION["carrinho"]; //peguei
-    } else {
-        $produtos = array();
-    }
+   // $nome = $_GET["nome"];
 
-    $produtos[] = $nomeProduto;
-    $_SESSION["carrinho"] = $produtos;
-}
+    //if (isset($_SESSION["carrinho"])) {
+     //   $produtos = $_SESSION["carrinho"]; //peguei
+    //} else {
+      //  $produtos = array();
+    //}
 
+   // $produtos[] = $nomeProduto;
+   // $_SESSION["carrinho"] = $produtos;
+//}
+
+/** admin */
 function deletar($idproduto) {
     print_r ($_SESSION["carrinho"]);
     

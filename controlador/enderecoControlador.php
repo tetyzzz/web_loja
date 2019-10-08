@@ -1,5 +1,7 @@
 <?php
 require_once "modelo/enderecoModelo.php";
+
+/**user*/
 function novoende($id){
     if (ehPost()){
         $logradouro=$_POST['logradouro'];
@@ -51,16 +53,22 @@ function novoende($id){
     }
     
 }
+
+/**user*/
 function verEnderecoId($idendereco, $id){
     $dados= array();
     $dados['endereco']= pegarEnderecoId($idendereco);
     $dados['id']= $id;
     exibir("endereco/detalharEndereco", $dados);
 }
+
+/**user*/
 function deletarE($idendereco){
     $msg = deletarEndereco($idendereco);
     redirecionar("usuario/listarUsuarios");
 }
+
+/**user*/
 function editarE($idendereco, $id){
     if (ehPost()){
         $logradouro=$_POST['logradouro'];
@@ -110,6 +118,7 @@ function editarE($idendereco, $id){
     }
 }
 
+/** anon */
 function listarEndereco(){
     $dados = array();
     $dados ["endereco"] = editarendereco();
