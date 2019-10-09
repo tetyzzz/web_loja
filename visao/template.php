@@ -10,7 +10,7 @@
 
 <div id="it">
     <div id="colum">
-        <a id="img" href="./principal/paginaprincipal"><img id="fundo" src="./publico/imgs/logaster.png"></a>
+        <a id="img" href="./principal/index"><img id="fundo" src="./publico/imgs/logaster.png"></a>
         <a href="./car/listar"><button class="button button5" title="Carrinho" ><i class='fas fa-cart-plus' ></i></button></a>
         <a href="./cliente/olhar"><button class="button button5" title="Login"><i class='fas fa-user'></i></button></a>
         <form id="bar" method="POST" action="./produto/buscar"> 
@@ -19,7 +19,7 @@
         </form>
     </div>
     <div class="navbar">
-        <a href="./principal/paginaprincipal">Home</a>
+        <a href="./principal/index">Home</a>
         <a href="./produto/listarprodutos">Produtos</a>
         <a href="./admin/secadmin">Seção Administrador</a>
         <a href="./car/listar">Carrinho</a>
@@ -32,7 +32,7 @@
         <?php require $viewFilePath; ?>
         <br><br>
         <ul>
-            <li id="waa" ><a href="./principal/paginaprincipal"><button id="aves">Página Principal</button></a><br><br></li>
+            <li id="waa" ><a href="./principal/index"><button id="aves">Página Principal</button></a><br><br></li>
             <li id="waa" ><a href="./car/listar"><button id="aves">Meu Carrinho</button></a><br><br></li>
             <li id="waa" ><a href="./cliente/listar"><button id="aves">Listar todos os clientes</button></a><br><br></li>
             <li id="waa" ><a href="./produto/listarprodutos"><button id="aves">Listar todos os produtos</button></a><br><br></li>

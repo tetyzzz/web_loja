@@ -1,6 +1,6 @@
 <?php
 
-require_once "modelo/usuarioModelo.php";
+require_once "modelo/clienteModelo.php";
 
 /** anon */
 function index() {

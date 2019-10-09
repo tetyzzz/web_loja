@@ -48,3 +48,10 @@ function editarCliente($id, $email, $senha) {
     }
     return 'Cliente alterado com sucesso!';
 }
+
+function pegarClientePorEmailSenha($email, $senha) {
+    $sql = "SELECT * FROM cliente WHERE email= '$email' and senha = '$senha'";
+    $resultado = mysqli_query(conn(), $sql);
+    $usuario = mysqli_fetch_assoc($resultado);
+    return $usuario;
+}

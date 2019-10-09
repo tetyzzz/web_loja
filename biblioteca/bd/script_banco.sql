@@ -30,6 +30,7 @@ create table cliente(
 	id integer not null auto_increment,
 	email varchar(40) not null,
 	senha varchar(20) not null,
+        tipo  varchar(20) not null,
 	primary key (id));
 
 create table produto(

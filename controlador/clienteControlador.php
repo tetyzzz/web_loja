@@ -10,7 +10,7 @@ function ver($id) {
     exibir("cliente/visualizar", $dados);
 }
 
-/** admin */
+/** anon */
 function OLHAR() {
 
     if (ehPost()) {
