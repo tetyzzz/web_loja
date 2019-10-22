@@ -32,15 +32,26 @@
         <?php require $viewFilePath; ?>
         <br><br>
         <ul>
+            <?php if (acessoPegarPapelDoUsuario() == '') { ?>
             <li id="waa" ><a href="./principal/index"><button id="aves">Página Principal</button></a><br><br></li>
+            <?php } ?>
+            <?php if (acessoPegarPapelDoUsuario() == '') { ?>
             <li id="waa" ><a href="./car/listar"><button id="aves">Meu Carrinho</button></a><br><br></li>
+            <?php } ?>
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
             <li id="waa" ><a href="./cliente/listar"><button id="aves">Listar todos os clientes</button></a><br><br></li>
+            <?php } ?>
+            <?php if (acessoPegarPapelDoUsuario() == '') { ?>
             <li id="waa" ><a href="./produto/listarprodutos"><button id="aves">Listar todos os produtos</button></a><br><br></li>
+            <?php } ?>
+            <?php if (acessoPegarPapelDoUsuario() == '') { ?>
             <li id="waa" ><a href="./categoria/listarcategorias"><button id="aves">Listar todos as categorias</button></a></li>
+            <?php } ?>
+            <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
             <li id="waa" ><a href="./cupom/listarCupom"><button id="aves">Listar todos os cupons</button></a></li>
+            <?php } ?>
         </ul>
     </main>
-
 
     <div id="rodape">	
         <div id="r">
