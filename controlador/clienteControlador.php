@@ -5,9 +5,59 @@ require_once "modelo/enderecoModelo.php";
 
 /** admin */
 function ver($id) {
-    $dados["cliente"] = pegarUsuarioPorId($id);
+    $dados["cliente"] = pegarClientePorId($id);
     $dados["enderecos"] = listarEnderecos($id);
     exibir("cliente/visualizar", $dados);
+}
+
+/** admin */
+function adicionar() {
+    if (ehPost()) {
+        $nome = $_POST["nome"];
+        $email = $_POST["email"];
+        $senha = $_POST["senha"];
+        $cpf = $_POST["cpf"];
+        $ddn = $_POST["ddn"];
+        $tipo = $_POST["tipo"];
+
+        $errors = array();
+
+
+        if (strlen(trim($nome)) == 0) {
+            $errors[] = "Você deve inserir um nome.";
+        }
+
+        if (strlen(trim($email)) == 0) {
+            $errors[] = "Você deve inserir um e-mail.";
+        }
+
+        if (strlen(trim($senha)) == 0) {
+            $errors[] = "Você deve inserir um senha.";
+        }
+        
+        if (strlen(trim($cpf)) == 0) {
+            $errors[] = "Você deve inserir um cpf.";
+        }
+        if (strlen(trim($ddn)) == 0) {
+            $errors[] = "Você deve inserir uma data de nascimento.";
+        }
+        
+        if (strlen(trim($tipo)) == 0) {
+            $errors[] = "Você deve inserir um tipo.";
+        }
+
+        if (count($errors) > 0) {
+            $dados = array();
+            $dados["errors"] = $errors;
+            exibir("cliente/formulariocliente", $dados);
+        } else {
+            $msg = adicionarCliente($nome, $email, $senha1, $cpf, $ddn, $tipo);
+            echo $msg;
+            redirecionar("cliente/listarcliente");
+        }
+    } else {
+        exibir("cliente/formulariocliente");
+    }
 }
 
 /** anon */
