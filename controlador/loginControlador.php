@@ -6,11 +6,11 @@ require_once "modelo/clienteModelo.php";
 function index() {
     if (ehPost()) {
         extract($_POST);
-        $cliente = pegarClientePorEmailSenha($email, $senha, $tipo);
+        $cliente = pegarClientePorEmailSenha($email, $senha);
         
         if (acessoLogar($cliente)) {
             alert("bem vindo" . $login);
-            redirecionar("usuario");
+            redirecionar("cliente");
         } else {
             alert("usuario ou senha invalidos!");
         }

@@ -1,7 +1,7 @@
 <?php
 
 function adicionarCliente($nome, $email, $senha1, $cpf, $ddn, $tipo) {
-    $sql = "INSERT INTO cliente (email, senha, cpf, ddn, tipo) values ('$nome', '$email', '$senha1', '$cpf', '$ddn', '$tipo')";
+    $sql = "INSERT INTO cliente (nome, email, senha, cpf, ddn, tipo) values ('$nome', '$email', '$senha1', '$cpf', '$ddn', '$tipo')";
     $resultado = mysqli_query($cnx = conn(), $sql);
 
     if (!$resultado) {
@@ -49,7 +49,7 @@ function editarCliente($id, $email, $senha) {
     return 'Cliente alterado com sucesso!';
 }
 
-function pegarClientePorEmailSenha($email, $senha, $tipo) {
+function pegarClientePorEmailSenha($email, $senha) {
     $sql = "SELECT * FROM cliente WHERE email= '$email' and senha = '$senha'";
     $resultado = mysqli_query(conn(), $sql);
     $usuario = mysqli_fetch_assoc($resultado);

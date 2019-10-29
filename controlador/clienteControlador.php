@@ -9,13 +9,12 @@ function ver($id) {
     $dados["enderecos"] = listarEnderecos($id);
     exibir("cliente/visualizar", $dados);
 }
-
-/** admin */
+/** anon */
 function adicionar() {
     if (ehPost()) {
         $nome = $_POST["nome"];
         $email = $_POST["email"];
-        $senha = $_POST["senha"];
+        $senha = $_POST["senha1"];
         $cpf = $_POST["cpf"];
         $ddn = $_POST["ddn"];
         $tipo = $_POST["tipo"];
@@ -49,14 +48,14 @@ function adicionar() {
         if (count($errors) > 0) {
             $dados = array();
             $dados["errors"] = $errors;
-            exibir("cliente/formulariocliente", $dados);
+            exibir("cliente/formulario", $dados);
         } else {
-            $msg = adicionarCliente($nome, $email, $senha1, $cpf, $ddn, $tipo);
+            $msg = adicionarCliente($nome, $email, $senha, $cpf, $ddn, $tipo);
             echo $msg;
             redirecionar("cliente/listarcliente");
         }
     } else {
-        exibir("cliente/formulariocliente");
+        exibir("cliente/formulario");
     }
 }
 
@@ -104,7 +103,7 @@ function OLHAR() {
 }
 
 /** anon */
-function listar() {
+function listarcliente() {
     $dados = array();
     $dados ["clientes"] = pegartodosclientes();
     exibir("cliente/listar", $dados);
@@ -118,7 +117,7 @@ function mostrar() {
 /** admin */
 function deletar($id) {
     $msg = deletarCliente($id);
-    redirecionar("./cliente/listar");
+    redirecionar("./cliente/listarcliente");
 }
 
 /** admin */

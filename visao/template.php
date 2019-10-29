@@ -23,7 +23,7 @@
         <a href="./produto/listarprodutos">Produtos</a>
         <a href="./admin/secadmin">Seção Administrador</a>
         <a href="./car/listar">Carrinho</a>
-        <a href="./cliente/olhar">Cadastrar-se</a>
+        <a href="./cliente/adicionar">Cadastrar-se</a>
     </div>
 </div>
 
@@ -39,7 +39,7 @@
             <li id="waa" ><a href="./car/listar"><button id="aves">Meu Carrinho</button></a><br><br></li>
             <?php } ?>
             <?php if (acessoPegarPapelDoUsuario() == 'admin') { ?>
-            <li id="waa" ><a href="./cliente/listar"><button id="aves">Listar todos os clientes</button></a><br><br></li>
+            <li id="waa" ><a href="./cliente/listarcliente"><button id="aves">Listar todos os clientes</button></a><br><br></li>
             <?php } ?>
             <?php if (acessoPegarPapelDoUsuario() == '') { ?>
             <li id="waa" ><a href="./produto/listarprodutos"><button id="aves">Listar todos os produtos</button></a><br><br></li>
