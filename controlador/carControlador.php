@@ -2,7 +2,7 @@
 
 require_once 'modelo/produtoModelo.php';
 
-/** admin */
+/** anon */
 function adicionar($idproduto) {
 
     if (!isset($_SESSION["carrinho"])) {
@@ -16,11 +16,11 @@ function adicionar($idproduto) {
     redirecionar("car/listar");
 }
 
-/** user */ 
+/** anon */ 
 function listar() {
-
-    if (isset($_SESSION["carrinho"])) {
+    
         $todos = array();
+        if (isset($_SESSION["carrinho"])) {
         $produtos = $_SESSION["carrinho"];
         foreach ($produtos as $produto):
             $todos[] = pegarprodutoPorId($produto);
@@ -52,7 +52,7 @@ function listar() {
    // $_SESSION["carrinho"] = $produtos;
 //}
 
-/** admin */
+/** anon */
 function deletar($idproduto) {
     print_r ($_SESSION["carrinho"]);
     

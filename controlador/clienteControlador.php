@@ -95,7 +95,7 @@ function OLHAR() {
             exibir("cliente/formulario", $dados);
         } else {
             $msg = adicionarCliente($email, $senha);
-            redirecionar("cliente/listar");
+            redirecionar("cliente/listarcliente");
         }
     } else {
         exibir("cliente/formulario");

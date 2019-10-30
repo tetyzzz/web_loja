@@ -6,13 +6,11 @@ if (ehPost()) {
     }
 }
 ?>
-
-
 <link rel="stylesheet" href="./publico/css/proform.css">
 <link rel="stylesheet" href="./publico/css/lispro.css">
 
-<form action="" method="POST">
-    <p id="cen">ID Admin</p><input id="cen" type="text" name="idadm"><br><br>
-    <p id="cen">Senha</p><input id="cen" type="password" name="senhadm"><br><br>
-    <button type="submit" id="texte">Enviar</button>
-</form>
+
+links que apontam pro relatorios 
+
+<a href="./proestoque/ver">Produtos</a>
+<a href="./categoria/listarcategorias">Categorias</a>

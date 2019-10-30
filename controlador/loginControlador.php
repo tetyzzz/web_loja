@@ -10,7 +10,7 @@ function index() {
         
         if (acessoLogar($cliente)) {
             alert("bem vindo" . $login);
-            redirecionar("cliente");
+            redirecionar("produto/listar");
         } else {
             alert("usuario ou senha invalidos!");
         }
