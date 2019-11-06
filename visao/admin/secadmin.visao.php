@@ -10,7 +10,6 @@ if (ehPost()) {
 <link rel="stylesheet" href="./publico/css/lispro.css">
 
 
-links que apontam pro relatorios 
-
-<a href="./proestoque/ver">Produtos</a>
+<a href="./cliente/listarcliente">Usuarios</a>
+<a href="./produto/listarprodutos">Produtos</a>
 <a href="./categoria/listarcategorias">Categorias</a>

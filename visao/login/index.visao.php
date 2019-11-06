@@ -1,4 +1,4 @@
-<h2>Acesse o sistema</h2>
+<h2>Faça seu login!</h2>
 
 <form method="POST" action="">
 
@@ -9,6 +9,6 @@
     <label for="passwd">senha:</label>
     <input id="passwd" class="form-control" type="password" name="senha">
 
-    <button type="submit" class="btn btn-primary">vai login</button>
+    <button type="submit" class="btn btn-primary">acessar</button>
 
 </form>

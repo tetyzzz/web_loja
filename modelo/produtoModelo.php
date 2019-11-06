@@ -1,7 +1,7 @@
 <?php
 
-function adicionarProduto($nome, $descricao, $quantidade, $preco, $idcategoria) {
-    $sql = "INSERT INTO produto (nome, descricao, quantidade, preco, idcategoria) values ('$nome', '$descricao', '$quantidade', '$preco', '$idcategoria')";
+function adicionarProduto($nome, $descricao, $quantidade, $preco, $img, $idcategoria) {
+    $sql = "INSERT INTO produto (nome, descricao, quantidade, preco, image, idcategoria) values ('$nome', '$descricao', '$quantidade', '$preco', '$img', '$idcategoria')";
     $resultado = mysqli_query($cnx = conn(), $sql);
 
     if (!$resultado) {
@@ -38,8 +38,8 @@ function deletarProduto($idproduto) {
     return 'Produto cadastrado com sucesso!';
 }
 
-function editarproduto($idproduto, $nome, $descricao, $quantidade, $preco) {
-    $sql = "UPDATE produto SET nome = '$nome', descricao = '$descricao', quantidade = '$quantidade', preco= '$preco' where idproduto = '$idproduto'";
+function editarproduto($idproduto, $nome, $descricao, $quantidade, $preco, $img) {
+    $sql = "UPDATE produto SET nome = '$nome', descricao = '$descricao', quantidade = '$quantidade', image = '$img', preco= '$preco' where idproduto = '$idproduto'";
     $resultado = mysqli_query($cnx = conn(), $sql);
     
     if (!$resultado) {die('Error ao alterar produto' . mysqli_error($cnx));}

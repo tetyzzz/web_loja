@@ -9,6 +9,13 @@ function ver($id) {
     $dados["enderecos"] = listarEnderecos($id);
     exibir("cliente/visualizar", $dados);
 }
+
+/** admin */
+function tornarAdm ($id) {
+    TornarUsuarioAdm($id);
+    redirecionar("cliente/listarcliente");
+}
+
 /** anon */
 function adicionar() {
     if (ehPost()) {
@@ -17,7 +24,7 @@ function adicionar() {
         $senha = $_POST["senha1"];
         $cpf = $_POST["cpf"];
         $ddn = $_POST["ddn"];
-        $tipo = $_POST["tipo"];
+        $tipo = "user";
 
         $errors = array();
 
@@ -102,7 +109,7 @@ function OLHAR() {
     }
 }
 
-/** anon */
+/** admin */
 function listarcliente() {
     $dados = array();
     $dados ["clientes"] = pegartodosclientes();

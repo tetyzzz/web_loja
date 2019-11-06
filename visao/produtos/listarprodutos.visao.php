@@ -16,6 +16,7 @@
     <?php foreach ($produtos as $produto): ?>
 
         <tr>
+            <td><img src="<?=$produto['image']?>" style="width:100px; height: auto;"></td>
             <td><?= $produto['nome'] ?></td>
             <td><?= $produto['preco'] ?></td>
 

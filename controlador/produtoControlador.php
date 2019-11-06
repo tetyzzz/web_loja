@@ -2,14 +2,15 @@
 
 require_once "modelo/produtoModelo.php";
 require_once "modelo/categoriaModelo.php";
+require_once "servico/uploadServico.php";
 
-/**admin*/
+/* * admin */
 function ver($idproduto) {
     $dados["produto"] = pegarprodutoPorId($idproduto);
     exibir("produtos/visualizar", $dados);
 }
 
-/** anon */
+/** admin */
 function listarprodutos() {
     $dados = array();
     $dados ["produtos"] = pegartodosprodutos();
@@ -24,6 +25,10 @@ function adicionar() {
         $quantidade = $_POST["quantidade"];
         $preco = $_POST["preco"];
         $idcategoria = $_POST["idcategoria"];
+
+        $name_imagem = $_FILES['img']['name'];
+        $imagem_temp_name = $_FILES['img']['tmp_name'];
+        $img = uploadImagem($imagem_temp_name, $name_imagem);
 
         $errors = array();
 
@@ -44,20 +49,13 @@ function adicionar() {
             $dados["errors"] = $errors;
             exibir("produtos/formularioproduto", $dados);
         } else {
-            $msg = adicionarProduto($nome, $descricao, $quantidade, $preco, $idcategoria);
+            adicionarProduto($nome, $descricao, $quantidade, $preco, $img, $idcategoria);
             redirecionar("produto/listarprodutos");
         }
     } else {
         $dados["categorias"] = pegartodascategorias();
         exibir("produtos/formularioproduto", $dados);
     }
-
-    $imagem_temp_name = $_FILES["imagem"]["tmp_name"]; # vai pegar o nome temporário do arquivo da imagem
-    $name_imagem = $_FILES["imagem"]["name"]; # vai pegar o nome real do arquivo da imagem
-
-    $imagem = uploadImagem($imagem_temp_name, $name_imagem); # retorna o caminho da imagem
-
-    adicionarProduto($nome, $preco, $descricao, $imagem, $estoque);
 
     redirecionar("produto/listar");
 }
@@ -76,7 +74,11 @@ function editar($idproduto) {
         $quantidade = $_POST["quantidade"];
         $preco = $_POST["preco"];
 
-        editarproduto($idproduto, $nome, $descricao, $quantidade, $preco);
+        $name_imagem = $_FILES['img']['name'];
+        $imagem_temp_name = $_FILES['img']['tmp_name'];
+        $img = uploadImagem($imagem_temp_name, $name_imagem);
+
+        editarproduto($idproduto, $nome, $descricao, $quantidade, $preco, $img);
         redirecionar("produto/listarprodutos", $dados);
     } else {
         $dados["produto"] = pegartodosprodutos($idproduto);
@@ -84,9 +86,9 @@ function editar($idproduto) {
     }
 }
 
-/**anon*/
-function buscar(){
+/* * anon */
+function buscar() {
     $nome = $_POST['busca'];
-    $dados['produtos']= BuscarProdutosPorNome($nome);
+    $dados['produtos'] = BuscarProdutosPorNome($nome);
     exibir("produtos/resultadoPesquisa", $dados);
 }

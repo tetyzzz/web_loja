@@ -2,7 +2,7 @@
 
 require_once "modelo/produtoModelo.php";
 
-/**anon */
+/** anon */
 function index() {
     $dados = array();
     $dados ["produtos"] = pegartodosprodutos();

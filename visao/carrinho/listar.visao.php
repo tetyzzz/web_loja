@@ -24,5 +24,5 @@
 
 </table>
 <br>
-<button id="texte"><a id="tex" href="./produto/listarprodutos" class="btn btn-primary">Adicionar Produto</a></button><br><br><br>
+<button id="texte"><a id="tex" href="./principal" class="btn btn-primary">Adicionar Produto</a></button><br><br><br>
 <button id="texte"><a id="tex" href="" class="btn btn-primary">Finalizar Pedido</a></button>

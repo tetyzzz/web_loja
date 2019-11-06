@@ -28,6 +28,16 @@ function pegarClientePorId($id) {
     return $cliente;
 }
 
+function TornarUsuarioAdm($id) {
+    $sql = "UPDATE cliente SET tipo = 'admin' where id = '$id'";
+    $resultado = mysqli_query($cnx = conn(), $sql);
+
+    if (!$resultado) {
+        die('Erro ao alterar cliente' . mysqli_error($cnx));
+    }
+    return 'Bem Vindo, ADM!';
+}
+
 function deletarCliente($id) {
     $sql = "delete from cliente where id = $id";
     $resultado = mysqli_query($cnx = conn(), $sql);

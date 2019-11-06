@@ -16,6 +16,9 @@
         <td><a href="./cliente/ver/<?=$cliente['id']?>"><button id="texte">Detalhes</button></a></td>
         <td><a href="./cliente/editar/<?=$cliente['id']?>"><button id="texte">Alterar</button></a></td>
         <td><a href="./cliente/deletar/<?=$cliente['id']?>"><button id="texte">Deletar</button></a></td>        
+        <?php if($cliente['tipo'] != 'admin'):?>
+            <td><a href="./cliente/tornarADM/<?=$cliente['id']?>"><button id="texte">Tornar ADM</button></a></td>
+        <?php endif;?>
     </tr>
     
     <?php endforeach; ?>
