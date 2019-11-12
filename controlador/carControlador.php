@@ -14,6 +14,8 @@ function adicionar($idproduto) {
     $produtos[] = $idproduto;
     $_SESSION["carrinho"] = $produtos;
     redirecionar("car/listar");
+   
+    
 }
 
 /** anon */ 
@@ -36,21 +38,6 @@ function listar() {
     exibir('carrinho/listar', $dados);
 }
 
-
-//function aha() {
- //   session_start();
-
-   // $nome = $_GET["nome"];
-
-    //if (isset($_SESSION["carrinho"])) {
-     //   $produtos = $_SESSION["carrinho"]; //peguei
-    //} else {
-      //  $produtos = array();
-    //}
-
-   // $produtos[] = $nomeProduto;
-   // $_SESSION["carrinho"] = $produtos;
-//}
 
 /** anon */
 function deletar($idproduto) {

@@ -21,6 +21,6 @@ function getPedidoByCity($cidade)
     return $pedidos_municipio;
 }
 
-function recebeDados ($pagamento) {
-    
+function recebeDados ($usuario, $pagamento, $produtos) {
+    $sql = "";    
 }

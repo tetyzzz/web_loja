@@ -12,3 +12,4 @@
   Insira a forma de pagamento: <input type="text" name="descricao" value="<?= @ $pagamento['descricao'] ?>"> <br> <br>
 	<button type="submit">Enviar</button>
 </form>
+
