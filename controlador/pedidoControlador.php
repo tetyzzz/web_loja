@@ -1,5 +1,28 @@
 <?php
 
+require_once 'modelo/pedidoModelo.php';
+require_once 'modelo/produtoModelo.php';
+
+function index() {
+    $produtos = $_SESSION['carrinho'];
+    $quant = 0;
+    $total = 0;
+
+    foreach ($produtos as $produto => $id) {
+        $prod = pegarprodutoPorId($id);
+        $quant++;
+        $total += $prod['preco'];
+        $listaProdutos[] = $prod;
+    }
+
+    $total = number_format($total, 2);
+
+    $dados = array();
+    $dados["produtos"] = $listaProdutos;
+    $dados["total"] = $total;
+    exibir("pedido/pedido", $dados);
+}
+
 function salvarPedido (){
     if (ehPost()){
         $formapaga = $_POST['descricao'];
@@ -9,12 +32,3 @@ function salvarPedido (){
     }
     
 }
-
-CREATE TABLE pedido (
-	idPedido BIGINT(11) NOT NULL AUTO_INCREMENT,
-	idCliente BIGINT(11) NOT NULL,
-	formapaga BIGINT NOT NULL,
-	PRIMARY KEY(idPedido),
-	FOREIGN KEY(idCliente) REFERENCES cliente(id) ON DELETE CASCADE ON UPDATE CASCADE,
-	FOREIGN KEY(formapaga) REFERENCES formapagamento(idFormaPagamento) ON DELETE CASCADE ON UPDATE CASCADE
-);

@@ -77,3 +77,18 @@ primary key (idcupom)
             WHERE endereco.cidade = v_cidade;
         END; $$
     DELIMITER ;
+
+
+CREATE TABLE pedido (
+	idpedido INT NOT NULL AUTO_INCREMENT,
+	idcliente INT NOT NULL,
+	idendereco INT NOT NULL,
+        idFormaPagamento INT NOT NULL,
+        desconto INT,
+	PRIMARY KEY(idpedido),
+	FOREIGN KEY(idcliente) REFERENCES cliente(idcliente) ON UPDATE CASCADE ON DELETE CASCADE,
+	FOREIGN KEY(idendereco) REFERENCES endereco(idendereco) ON UPDATE CASCADE ON DELETE CASCADE,
+        FOREIGN KEY(idFormaPagamento) REFERENCES FormaPagamento(idFormaPagamento) ON UPDATE CASCADE ON DELETE CASCADE
+);
+
+CREATE TABLE 

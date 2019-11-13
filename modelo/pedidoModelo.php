@@ -21,6 +21,18 @@ function getPedidoByCity($cidade)
     return $pedidos_municipio;
 }
 
-function recebeDados ($usuario, $pagamento, $produtos) {
-    $sql = "";    
+
+function registrarPedido ($idFormaPagamento, $idcliente, $idendereco, $desconto, $produtos) {
+    $sql = "INSERT INTO pedido (idFormaPagamento, idusuario, idendereco, des) VALUES ('$idFormaPagamento','$idusuario' '$idendereco', '$valorcupom')";
+    $resultado = mysqli_query ($cnx = conn(), $sql);
+    $idPedido = mysqli_insert_id($cnx);
+    foreach ($produtosCarrinho as $produtos) {
+        $idProduto = $produtos["idproduto"];
+        $quantidade = 1;
+
+        $sql = "INSERT INTO pedido_produto (idProduto, idPedido, quantidade) VALUES ('$idProduto', '$idPedido', '$quantidade')";
+        $resultado = mysqli_query ($cnx = conn(), $sql);
+    }
+    if(!$resultado) { die('Erro ao adicionar um pedido'. mysqli_error($cnx));}
+    return 'Pedido salvo <br> <a href="./sacola/index/" class="btn btn-primary">Voltar</a>';  
 }
