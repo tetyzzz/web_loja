@@ -55,17 +55,33 @@ create table cupom(
     primary key (idcupom)
 );
 
+create table FormaPagamento(
+    idFormaPagamento int not null auto_increment,
+    descricao varchar(60) not null,
+    primary key (idFormaPagamento)
+);
+
 CREATE TABLE pedido (
     idpedido INT NOT NULL AUTO_INCREMENT,
     idcliente INT NOT NULL,
     idendereco INT NOT NULL,
     idFormaPagamento INT NOT NULL,
-    desconto INT,
+    DataCompra date not null,
     PRIMARY KEY(idpedido),
     FOREIGN KEY(idcliente) REFERENCES cliente(idcliente) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY(idendereco) REFERENCES endereco(idendereco) ON UPDATE CASCADE ON DELETE CASCADE,
     FOREIGN KEY(idFormaPagamento) REFERENCES FormaPagamento(idFormaPagamento) ON UPDATE CASCADE ON DELETE CASCADE
 );
+
+create table pedido_produto (
+idProduto int not null,
+idPedido int not null,
+quantidade int not null,
+primary key (idProduto, idPedido),
+foreign key (idProduto) references produto (idProduto) on delete cascade on update cascade,
+foreign key (idPedido) references pedido (idPedido) on delete cascade on update cascade
+);
+
 
 -- STORED PROCEDURES
 -- Pedidos por dataCompra
@@ -93,3 +109,15 @@ CREATE TABLE pedido (
             WHERE endereco.cidade = v_cidade;
         END; $$
     DELIMITER ;
+
+
+--colocar cliente como adm 
+update cliente set tipo = 'admin' where id=1;
+
+--pedido por cidade
+select cliente.cpf, pedido.idPedido, pedido.dataCompra, endereco.cep from cliente
+    inner join pedido 
+    on cliente.id=pedido.id
+    inner join endereco 
+    on pedido.idendereco=endereco.idendereco 
+    where endereco.cidade=aCidade;

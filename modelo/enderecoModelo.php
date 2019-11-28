@@ -20,6 +20,8 @@
     }
     return $enderecos;
 }
+
+
 function pegarEnderecoId($id){
     $comando="select * from endereco where idendereco=$id";
     $cnx=conn();

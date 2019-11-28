@@ -3,7 +3,7 @@
 require_once "modelo/ClienteModelo.php";
 require_once "modelo/enderecoModelo.php";
 
-/** anon */
+/** admin, user */
 function ver($id) {
     $dados["cliente"] = pegarClientePorId($id);
     $dados["enderecos"] = listarEnderecos($id);
@@ -133,4 +133,9 @@ function editar($id) {
         $dados["cliente"] = pegarusuarioPorId($id);
         exibir("cliente/formulario", $dados);
     }
+}
+
+/** admin */
+function adm() {
+    exibir("admin/secadmin");
 }

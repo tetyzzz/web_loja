@@ -46,3 +46,10 @@ function deletarcupom($idcupom) {
     }
     return 'Cupom cadastrada com sucesso!';
 }
+
+function pegarDescontoCupom($nomecupom) {
+    $sql = "select * from cupom where nomecupom='$nomecupom'";
+    $resultado = mysqli_query(conn(), $sql);
+    $cupom = mysqli_fetch_assoc($resultado);
+    return $cupom;
+}

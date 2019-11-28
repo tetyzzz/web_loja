@@ -42,7 +42,7 @@ function listar() {
 /** anon */
 function deletar($idproduto) {
     print_r ($_SESSION["carrinho"]);
-    
+    //unset($_SESSION['carrinho']);
     for ($i = 0; $i <= count($_SESSION["carrinho"]); $i++) {
         if ($_SESSION["carrinho"][$i] == $idproduto) {
             $indice = $i;

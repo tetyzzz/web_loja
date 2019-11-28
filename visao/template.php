@@ -12,7 +12,14 @@
     <div id="colum">
         <a id="img" href="./principal/index"><img id="fundo" src="./publico/imgs/logaster.png"></a>
         <a href="./car/listar"><button class="button button5" title="Carrinho" ><i class='fas fa-cart-plus' ></i></button></a>
+        <?php
+        $idUsuario=acessoPegarIdDoUsuario();
+        if(acessoUsuarioEstaLogado()){?>
+        <a href="./cliente/ver/<?=$idUsuario?>"><button class="button button5" title="Login"><i class='fas fa-user'></i></button></a>
+        <?php } else{ ?>
         <a href="./login/"><button class="button button5" title="Login"><i class='fas fa-user'></i></button></a>
+        <?php }
+        ?>
         <form id="bar" method="POST" action="./produto/buscar"> 
             <input id="pesquisa" type="text" placeholder="Pesquisar" name="busca">
             <button class="button" id="lupa" title="Pesquisar" type="submit"><i class="fa fa-search"></i></button>
@@ -20,7 +27,8 @@
     </div>
     <div class="navbar">
         <a href="./principal/index">Home</a>
-        <?php if(acessoPegarPapelDoUsuario() == 'admin'){?><a href="./produto/listarprodutos">Produtos</a><?php }?>
+        <?php if(acessoPegarPapelDoUsuario() == 'admin'){?><a href="./produto/listarprodutos">Produtos</a> 
+        <a href="./cliente/adm">ADM</a><?php }?>
         <a href="./car/listar">Carrinho</a>
         <a href="./cliente/adicionar">Cadastrar-se</a>
         <?php if(acessoUsuarioEstaLogado()):?>

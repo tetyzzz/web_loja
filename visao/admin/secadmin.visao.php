@@ -1,15 +1,6 @@
-
-<?php
-if (ehPost()) {
-    foreach ($errors as $erro) {
-        echo "$erro<br>";
-    }
-}
-?>
-<link rel="stylesheet" href="./publico/css/proform.css">
-<link rel="stylesheet" href="./publico/css/lispro.css">
-
-
-<a href="./cliente/listarcliente">Usuarios</a>
-<a href="./produto/listarprodutos">Produtos</a>
-<a href="./categoria/listarcategorias">Categorias</a>
+<div id="">
+    <a href="./produto/listarProdutosporCategoria"><button class="botao2">Produtos por categoria</button></a>
+    <a href="./pedido/listarPedidopeloTempo"><button class="botao2">Pedidos por intervalo de tempo</button></a>
+    <a href="./pedido/listarPedidoLoca"><button class="botao2">Pedidos por localização</button></a>
+    <a href="./pedido/calcularFaturaporPeriodo"><button class="botao2">Faturamento por período</button></a>
+</div>

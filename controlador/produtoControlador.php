@@ -92,3 +92,11 @@ function buscar() {
     $dados['produtos'] = BuscarProdutosPorNome($nome);
     exibir("produtos/resultadoPesquisa", $dados);
 }
+
+/** admin */
+function listarProdutosporCategoria() {
+    $dados['categorias'] = pegartodascategorias();
+    $dados['produtos'] = pegartodosprodutos();
+    
+    exibir("produtos/listarProdutosporCategoria", $dados);    
+}
