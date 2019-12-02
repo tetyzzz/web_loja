@@ -37,7 +37,9 @@ create table endereco(
     cidade varchar(60) not null,
     cep varchar(60) not null,
     primary key (idendereco),
-    foreign key (id) references cliente (id) on delete cascade on update cascade
+    foreign key (id) references cliente (i
+
+d) on delete cascade on update cascade
 );
 
 create table categorias(
